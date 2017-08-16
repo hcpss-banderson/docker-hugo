@@ -14,3 +14,7 @@ RUN buildDeps="wget" \
 	&& rm /hugo.tar.gz \
 	&& apt-get remove -y $buildDeps \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir /app
+
+WORKDIR /app
