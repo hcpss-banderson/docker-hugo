@@ -2,7 +2,7 @@ FROM ubuntu
 
 MAINTAINER brendan_anderson@hcpss.org
 
-ENV HUGO_VERSION="0.26"
+ENV HUGO_VERSION="0.68.3"
 
 RUN buildDeps="wget" \
 	&& apt-get update \
