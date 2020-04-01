@@ -1,13 +1,13 @@
 FROM ubuntu
 
-MAINTAINER brendan_anderson@hcpss.org
+LABEL maintainer=brendan_anderson@hcpss.org
 
 ENV HUGO_VERSION="0.68.3"
 
 RUN buildDeps="wget" \
 	&& apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y $buildDeps \
-	&& wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz \
+	&& wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz \
 		-O /hugo.tar.gz --secure-protocol=TLSv1 \
 	&& tar xvzf /hugo.tar.gz \
 	&& mv /hugo /usr/local/bin/hugo \
